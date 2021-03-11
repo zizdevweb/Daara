@@ -8,178 +8,303 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <style>
-        body {
-                background: #222D32;
-                font-family: 'Roboto', sans-serif;
-            }
+ @import url(https://fonts.googleapis.com/css?family=Varela);
 
-            .login-box {
-                margin-top: 75px;
-                height: auto;
-                background: #1A2226;
-                text-align: center;
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            }
+html {
+  height: 100%;
+}
 
-            .login-key {
-                height: 100px;
-                font-size: 80px;
-                line-height: 100px;
-                background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+body {
+  background: #f2f2f2;
+  font-family: 'Varela', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  min-height: 100%;
+  position: relative;
+}
 
-            .login-title {
-                margin-top: 15px;
-                text-align: center;
-                font-size: 30px;
-                letter-spacing: 2px;
-                margin-top: 15px;
-                font-weight: bold;
-                color: #ECF0F5;
-            }
+label {
+  margin-top: 6px;
+  line-height: 17px;
+}
 
-            .login-form {
-                margin-top: 25px;
-                text-align: left;
-            }
+a {
+  color: #fff;
+}
 
-            input[type=text] {
-                background-color: #1A2226;
-                border: none;
-                border-bottom: 2px solid #0DB8DE;
-                border-top: 0px;
-                border-radius: 0px;
-                font-weight: bold;
-                outline: 0;
-                margin-bottom: 20px;
-                padding-left: 0px;
-                color: #ECF0F5;
-            }
+a:focus,
+a:hover {
+  color: #008080;
+}
 
-            input[type=password] {
-                background-color: #1A2226;
-                border: none;
-                border-bottom: 2px solid #0DB8DE;
-                border-top: 0px;
-                border-radius: 0px;
-                font-weight: bold;
-                outline: 0;
-                padding-left: 0px;
-                margin-bottom: 20px;
-                color: #ECF0F5;
-            }
+.checkbox-inline+.checkbox-inline,
+.radio-inline+.radio-inline {
+  margin-top: 6px;
+}
 
-            .form-group {
-                margin-bottom: 40px;
-                outline: 0px;
-            }
+/******* Login Page *******/
 
-            .form-control:focus {
-                border-color: inherit;
-                -webkit-box-shadow: none;
-                box-shadow: none;
-                border-bottom: 2px solid #0DB8DE;
-                outline: 0;
-                background-color: #1A2226;
-                color: #ECF0F5;
-            }
+body.login {
+  background: rgba(241, 242, 181, 1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(19, 80, 88, 1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1f2b5', endColorstr='#135058', GradientType=1);
+}
 
-            input:focus {
-                outline: none;
-                box-shadow: 0 0 0;
-            }
+.relative {
+  position: relative;
+}
 
-            label {
-                margin-bottom: 0px;
-            }
+.login-container-wrapper .logo,
+.login-container-wrapper .welcome {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+}
 
-            .form-control-label {
-                font-size: 10px;
-                color: #6C6C6C;
-                font-weight: bold;
-                letter-spacing: 1px;
-            }
+.login-container-wrapper .logo {
+  text-align: center;
+  position: absolute;
+  top: -42px;
+  margin: 0 auto;
+  width: 25%;
+  left: 37.5%;
+  border-radius: 50%;
+  background-color: #344455;
+  padding: 25px;
+  box-shadow: 0px 0px 9px 2px #344454;
+}
 
-            .btn-outline-primary {
-                border-color: #0DB8DE;
-                color: #0DB8DE;
-                border-radius: 0px;
-                font-weight: bold;
-                letter-spacing: 1px;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            }
+.login-container-wrapper {
+  max-width: 400px;
+  margin: 10% auto 8%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: rgba(57, 89, 116, 0.8);
+  box-shadow: 1px 1px 10px 1px #000000, 8px 8px 0px 0px #344454, 12px 12px 10px 0px #000000;
+  position: relative;
+  padding-top: 80px;
+}
 
-            .btn-outline-primary:hover {
-                background-color: #0DB8DE;
-                right: 0px;
-            }
+.logo .fa {
+  font-size: 50px;
+}
+.login input:focus + .fa{
+  color:#fff;
+}
+.login-form .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
 
-            .login-btm {
-                float: left;
-            }
+.login-form i {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #93a5ab;
+}
 
-            .login-button {
-                padding-right: 0px;
-                text-align: right;
-                margin-bottom: 25px;
-            }
+.login-form .input-lg {
+  font-size: 16px;
+  height: 52px;
+  padding: 10px 25px;
+  border-radius: 0;
+}
 
-            .login-text {
-                text-align: left;
-                padding-left: 0px;
-                color: #A2A4A4;
-            }
+.login input[type="email"],
+.login input[type="password"],
+.login input:focus {
+  background-color: rgba(40, 52, 67, 0.75);
+  border: 1px solid #4a525f;
+  color: #eee;
+  border-left: 4px solid #93a5ab;
+}
 
-            .loginbttm {
-                padding: 0px;
-            }
+.login input:focus {
+  border-left: 4px solid #ccd8da;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: rgba(40, 52, 67, 0.75)!important;
+  background-image: none;
+  color: rgb(0, 0, 0);
+  border-color: #FAFFBD;
+}
+
+.login .checkbox label,
+.login .checkbox a {
+  color: #ddd;
+}
+
+.btn-success {
+  background-color: transparent;
+  background-image: none;
+  padding: 8px 50px;
+  border-radius: 0;
+  border: 2px solid #93a5ab;
+  box-shadow: inset 0 0 0 0 #7692A7;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+.btn-success:focus,
+.btn-success:hover,
+.btn-success.active,
+.btn-success:active {
+  background-color: transparent;
+  border-color: #fff;
+  box-shadow: inset 0 0 100px 0 #7692A7;
+  color: #FFF;
+}
+#particles-js {
+/*   background: cornflowerblue; */
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:-1;
+}
     </style>
 </head>
-<body>
+<div id="particles-js"></div>
+<body class="login">
+	<div class="container">
+		<div class="login-container-wrapper clearfix">
+			<div class="logo">
+				<i class="fa fa-sign-in"></i>
+			</div>
+			<div class="welcome"><strong>Bienvenu(e),</strong> Merci de vous connecter</div>
+
+			<form class="form-horizontal login-form" method="POST" action="{{route('login')}}">
+                @csrf
+				<div class="form-group relative">
+					<input id="login_username" class="form-control input-lg" type="email" placeholder="Username" required>
+					<i class="fa fa-user"></i>
+				</div>
+				<div class="form-group relative password">
+					<input id="login_password" class="form-control input-lg" type="password" placeholder="Password" required>
+					<i class="fa fa-lock"></i>
+				</div>
+			  <div class="form-group">
+			    <button type="submit" class="btn btn-success btn-lg btn-block">Login</button>
+			  </div>
+        <div class="checkbox pull-left">
+			    <label><input type="checkbox"> Se souvenir de moi</label>
+			  </div>
+			  <div class="checkbox pull-right">
+			    <label> <a class="forget" href="" title="forget">Mot de passe Oublié</a> </label>
+			  </div>
+			</form>
+		</div>
     
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-2"></div>
-            <div class="col-lg-6 col-md-8 login-box">
-                <div class="col-lg-12 login-key">
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                </div>
-                <div class="col-lg-12 login-title">
-                    Daara | Internat
-                </div>
+    <h4 class="text-center">
+      <a target="_blank" href="/">
+        Aller à l'accueil
+      </a>
+    </h4>
+	</div>
+<script>
+    particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 60,
+      "density": {
+        "enable": true,
+        "value_area": 1000
+      }
+    },
+    "color": {
+      "value":  ["#344455", "#ffffff"]
+    },
+    "shape": {
+      "type": "edge",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 4,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 50,
+      "color": "#fff",
+      "opacity": 0.5,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "retina_detect": true
+});
 
-                <div class="col-lg-12 login-form">
-                    <div class="col-lg-12 login-form">
-                        <form>
-                            <div class="form-group">
-                                <label class="form-control-label">Login</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Mot de Passe</label>
-                                <input type="password" class="form-control" i>
-                            </div>
 
-                            <div class="col-lg-12 loginbttm">
-                                <div class="col-lg-6 login-btm login-text">
-                                    <!-- Error Message -->
-                                </div>
-                                <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">Se Connecter</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-2"></div>
-            </div>
-        </div>
+/* ---- stats.js config ---- */
 
-
-
-
-
-</body>
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+</script>
+  </body>
 </html>
