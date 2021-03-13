@@ -101,7 +101,7 @@
             <div name="diagnostic" class="pie pie--value pie--disc" style="--percent:35;"></div><label for="diagnostic" style="font-size:17px"><span class="badge badge-danger" style="padding:12px"> Impayes |</span></label>
             <div name="devis" class="pie pie--value pie--disc" style="--percent:75;"></div><label for="devis" style="font-size:17px"><span class="badge badge-success" style="padding:12px"> A jours |</span></label>
             <div id="resume" class="pie pie--value pie--disc" style="--percent:17;"></div><label for="devis" style="font-size:17px"><span class="badge" style="background: #DD66BB; padding:12px">Avance |</span></label>
-            <div id="facture" class="pie pie--value pie--disc" style="--percent:98;"></div><label for="devis" style="font-size:17px">Arriere|</label>
+            <div id="facture" class="pie pie--value pie--disc" style="--percent:98;"></div><label for="devis" style="font-size:17px"><span class="badge badge-dark" style="padding:12px">Arriere |</label>
             {{-- <div class="pie pie--disc" style="--percent:40;"></div> --}}
         </div>
 <script>
