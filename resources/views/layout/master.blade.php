@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
       </head>
+      
     <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Daara | Internat</a>
@@ -24,11 +25,20 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('mensualites.index')}}">Mensualites</a>
             </li>
+            <li style="margin-left: 100%">
+              <form action="{{route ('logout')}}" method="post" >
+                @csrf
+                <button class="dropdown-item" type="submit"><i class="fas fa-power-off mr-2"></i>Deconnexion</button>
+              </form>
+            </li>
           </ul>
         </div>
       </nav>
+      
         <div class="container">
           @yield('content')
         </div>
+        
+        
     </body>
 </html>

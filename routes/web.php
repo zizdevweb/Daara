@@ -20,7 +20,7 @@ use App\Http\Controllers\MensualiteController;
 */
 
 Route::get('/', function () {
-    return view('layout.master');
+    return view('welcome');
 });
 
 Route::middleware('auth')->group(function () {

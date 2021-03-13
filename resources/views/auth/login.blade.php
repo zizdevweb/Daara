@@ -185,13 +185,13 @@ select:-webkit-autofill {
 			<div class="welcome"><strong>Bienvenu(e),</strong> Merci de vous connecter</div>
 
 			<form class="form-horizontal login-form" method="POST" action="{{route('login')}}">
-                @csrf
+         @csrf
 				<div class="form-group relative">
-					<input id="login_username" class="form-control input-lg" type="email" placeholder="Username" required>
+					<input id="login_username" name="email" class="form-control input-lg" type="email" placeholder="Username" required>
 					<i class="fa fa-user"></i>
 				</div>
 				<div class="form-group relative password">
-					<input id="login_password" class="form-control input-lg" type="password" placeholder="Password" required>
+					<input id="login_password" class="form-control input-lg" name="password" type="password" placeholder="Password" required>
 					<i class="fa fa-lock"></i>
 				</div>
 			  <div class="form-group">
