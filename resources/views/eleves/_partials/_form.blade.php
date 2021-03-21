@@ -105,10 +105,9 @@ $(document).ready(function() {
           dataType: "json",
           success: function(data) {
             console.log(data);
-			var titres= data;
-            titres.map(a=>{
-              niveau+='<option value="'+ a.titre+'">'+a.titre+'</option>'
-            })
+            // titres.map(a=>{
+              niveau ='<option value="'+ data.titre+'">'+ data.titre+'</option>'
+            // })
             $('#titre').html(niveau)
           }
           });

@@ -105,8 +105,7 @@ class EleveController extends Controller
     public function niveau(Request $request)
     {
        $level = $request->input('niveau');
-       $id = intval($level);
-       return Level::select('titre')->where('id','=',$id)->get();
+       return Level::select('titre')->where('juzz','=',$level)->first();
     }
 
     /**
